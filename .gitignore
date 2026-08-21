@@ -1,0 +1,23 @@
+# Local OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local Google OAuth credentials and generated tokens
+secrets/*
+!secrets/.gitkeep
+
+# Local logs and temporary files
+*.log
+tmp/
+temp/

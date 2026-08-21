@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "youtube-studio": {
+      "command": "python3",
+      "args": [
+        "./scripts/server.py"
+      ],
+      "cwd": ".",
+      "env": {
+        "YOUTUBE_CLIENT_SECRETS": "./secrets/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "./secrets/token.json"
+      }
+    }
+  }
+}

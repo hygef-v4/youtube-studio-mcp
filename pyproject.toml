@@ -1,0 +1,51 @@
+[project]
+name = "youtube-studio-mcp"
+version = "1.0.0"
+description = "High-performance, dependency-free Model Context Protocol (MCP) server for full YouTube Studio channel management, video publishing, playlists, comments, and deep analytics."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "hygef-v4" }]
+keywords = [
+  "mcp",
+  "model-context-protocol",
+  "youtube",
+  "youtube-api",
+  "youtube-analytics",
+  "youtube-studio",
+  "ai-agents",
+  "creator-tools",
+  "llm-tools"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = []
+
+[project.scripts]
+youtube-studio-mcp = "youtube_studio_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Repository = "https://github.com/hygef-v4/youtube-studio-mcp"
+Issues = "https://github.com/hygef-v4/youtube-studio-mcp/issues"
+
+[tool.ruff]
+line-length = 100
