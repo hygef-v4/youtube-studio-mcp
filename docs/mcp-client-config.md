@@ -21,8 +21,8 @@ Add the server entry to your Claude Desktop configuration file:
         "youtube-studio-mcp"
       ],
       "env": {
-        "YOUTUBE_CLIENT_SECRETS": "F:/code/git/youtube-studio-mcp/secrets/client_secret.json",
-        "YOUTUBE_TOKEN_FILE": "F:/code/git/youtube-studio-mcp/secrets/token.json"
+        "YOUTUBE_CLIENT_SECRETS": "/path/to/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "/path/to/token.json"
       }
     }
   }
@@ -35,11 +35,11 @@ Add the server entry to your Claude Desktop configuration file:
   "mcpServers": {
     "youtube-studio": {
       "command": "python",
-      "args": ["F:/code/git/youtube-studio-mcp/scripts/server.py"],
-      "cwd": "F:/code/git/youtube-studio-mcp",
+      "args": ["/path/to/youtube-studio-mcp/scripts/server.py"],
+      "cwd": "/path/to/youtube-studio-mcp",
       "env": {
-        "YOUTUBE_CLIENT_SECRETS": "F:/code/git/youtube-studio-mcp/secrets/client_secret.json",
-        "YOUTUBE_TOKEN_FILE": "F:/code/git/youtube-studio-mcp/secrets/token.json"
+        "YOUTUBE_CLIENT_SECRETS": "/path/to/youtube-studio-mcp/secrets/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "/path/to/youtube-studio-mcp/secrets/token.json"
       }
     }
   }
@@ -52,7 +52,7 @@ Add the server entry to your Claude Desktop configuration file:
 In Cursor Settings > Features > MCP:
 - **Name**: `youtube-studio`
 - **Type**: `command`
-- **Command**: `python F:/code/git/youtube-studio-mcp/scripts/server.py`
+- **Command**: `python /path/to/youtube-studio-mcp/scripts/server.py`
 
 Or add `.cursor/mcp.json`:
 ```json

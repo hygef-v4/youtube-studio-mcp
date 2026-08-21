@@ -395,24 +395,26 @@ const CONFIG_SNIPPETS = {
         "youtube-studio-mcp"
       ],
       "env": {
-        "YOUTUBE_CLIENT_SECRETS": "C:/path/to/secrets/client_secret.json",
-        "YOUTUBE_TOKEN_FILE": "C:/path/to/secrets/token.json"
+        "YOUTUBE_CLIENT_SECRETS": "/path/to/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "/path/to/token.json"
       }
     }
   }
 }`
   },
   claude: {
-    filepath: "%APPDATA%\\Claude\\claude_desktop_config.json",
+    filepath: "%APPDATA%\\Claude\\claude_desktop_config.json (Windows) or ~/Library/Application Support/Claude/claude_desktop_config.json (macOS)",
     code: `{
   "mcpServers": {
     "youtube-studio": {
       "command": "python",
-      "args": ["F:/code/git/youtube-studio-mcp/scripts/server.py"],
-      "cwd": "F:/code/git/youtube-studio-mcp",
+      "args": [
+        "/path/to/youtube-studio-mcp/scripts/server.py"
+      ],
+      "cwd": "/path/to/youtube-studio-mcp",
       "env": {
-        "YOUTUBE_CLIENT_SECRETS": "F:/code/git/youtube-studio-mcp/secrets/client_secret.json",
-        "YOUTUBE_TOKEN_FILE": "F:/code/git/youtube-studio-mcp/secrets/token.json"
+        "YOUTUBE_CLIENT_SECRETS": "/path/to/youtube-studio-mcp/secrets/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "/path/to/youtube-studio-mcp/secrets/token.json"
       }
     }
   }
