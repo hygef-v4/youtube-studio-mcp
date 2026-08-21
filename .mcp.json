@@ -1,14 +1,15 @@
 {
   "mcpServers": {
     "youtube-studio": {
-      "command": "python3",
+      "command": "uvx",
       "args": [
-        "./scripts/server.py"
+        "--from",
+        "git+https://github.com/hygef-v4/youtube-studio-mcp.git",
+        "youtube-studio-mcp"
       ],
-      "cwd": ".",
       "env": {
-        "YOUTUBE_CLIENT_SECRETS": "./secrets/client_secret.json",
-        "YOUTUBE_TOKEN_FILE": "./secrets/token.json"
+        "YOUTUBE_CLIENT_SECRETS": "secrets/client_secret.json",
+        "YOUTUBE_TOKEN_FILE": "secrets/token.json"
       }
     }
   }
