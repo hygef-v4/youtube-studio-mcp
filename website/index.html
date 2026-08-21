@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Studio MCP — Autonomous AI YouTube Management</title>
+  <meta name="description" content="High-performance, dependency-free Model Context Protocol (MCP) server for full YouTube Studio channel management, video publishing, playlists, comments, transcripts, and deep analytics.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow Accents -->
+  <div class="bg-glow-container">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </div>
+        <span class="brand-name">YouTube Studio <span class="badge-mcp">MCP</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#tools">32 Tools</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#quickstart">Quickstart</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+
+        <a href="https://github.com/hygef-v4/youtube-studio-mcp" target="_blank" rel="noopener" class="btn btn-github">
+          <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>Star on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-pill-badge">
+        <span class="status-dot"></span>
+        <span class="badge-text">v1.0.0 Release • 32 MCP Tools • Zero Runtime Dependencies</span>
+      </div>
+
+      <h1 class="hero-title">
+        Control YouTube Studio with <br>
+        <span class="gradient-text">Autonomous AI Agents</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Empower Claude Desktop, Cursor, and Antigravity to manage videos, curate playlists, moderate comments, extract spoken transcripts, and perform deep channel analytics seamlessly.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#quickstart" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Quick Install (uvx)</span>
+        </a>
+        <a href="#tools" class="btn btn-secondary">
+          <span>Explore 32 Tools</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Interactive Playground Terminal -->
+      <div class="terminal-wrapper">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="terminal-title">Interactive Agent Playground — YouTube Studio MCP</div>
+          <div class="terminal-badge">LIVE DEMO</div>
+        </div>
+
+        <div class="terminal-actions-bar">
+          <span class="terminal-prompt-label">Try Prompt:</span>
+          <button class="prompt-tab active" data-scenario="transcript">🎙️ Extract Transcript</button>
+          <button class="prompt-tab" data-scenario="overview">📊 Channel Overview</button>
+          <button class="prompt-tab" data-scenario="analytics">📈 Traffic Sources</button>
+          <button class="prompt-tab" data-scenario="search">🔍 Search Competitors</button>
+        </div>
+
+        <div class="terminal-body" id="terminalOutput">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Advantages -->
+  <section id="features" class="section features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING EXCELLENCE</span>
+        <h2 class="section-title">Built for Performance, Security & Simplicity</h2>
+        <p class="section-subtitle">A state-of-the-art Model Context Protocol server crafted with meticulous attention to detail.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3>Zero Runtime Dependencies</h3>
+          <p>Built 100% on the Python Standard Library (<code>urllib</code>, <code>http.server</code>, <code>json</code>). Instant startup, no version drift, and zero bloat.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3>100% Local & Private</h3>
+          <p>Local loopback OAuth 2.0 PKCE. Your Google tokens and credentials never touch external third-party servers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3>Autonomous Token Renewal</h3>
+          <p>Proactive background refresh ensures long-running agent coding sessions and multi-step tasks are never interrupted.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
+            </svg>
+          </div>
+          <h3>Single & Bulk Transcript Extraction</h3>
+          <p>Extract full spoken dialogue, summary-ready text, or SRT timestamps from single videos, full playlists, or recent uploads.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3>Deep Analytics & Demographics</h3>
+          <p>Direct integration with YouTube Analytics API v2 for viewer demographics (age, gender, geography) and traffic source breakdowns.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper rose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+          </div>
+          <h3>Resumable Video & Thumbnail Uploads</h3>
+          <p>Standard 2-stage resumable protocol uploads large <code>.mp4</code> video files and high-res thumbnails with custom metadata.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 32-Tool Directory -->
+  <section id="tools" class="section tools-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPREHENSIVE TOOLSET</span>
+        <h2 class="section-title">Complete 32 MCP Tools Directory</h2>
+        <p class="section-subtitle">Search or filter by category to inspect parameters, schemas, and capabilities.</p>
+      </div>
+
+      <!-- Search & Category Filters -->
+      <div class="tools-control-bar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="toolSearchInput" placeholder="Search tool by name or keyword (e.g. transcript, upload, playlist)...">
+        </div>
+
+        <div class="category-pills" id="categoryPills">
+          <button class="pill-btn active" data-category="all">All (32)</button>
+          <button class="pill-btn" data-category="videos">Videos & Uploads (7)</button>
+          <button class="pill-btn" data-category="playlists">Playlists (7)</button>
+          <button class="pill-btn" data-category="captions">Captions & Transcripts (5)</button>
+          <button class="pill-btn" data-category="analytics">Analytics (5)</button>
+          <button class="pill-btn" data-category="comments">Comments (4)</button>
+          <button class="pill-btn" data-category="search">Search (2)</button>
+          <button class="pill-btn" data-category="auth">Auth & Setup (2)</button>
+        </div>
+      </div>
+
+      <!-- Tools Grid -->
+      <div class="tools-grid" id="toolsGrid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Flow -->
+  <section id="architecture" class="section arch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SYSTEM ARCHITECTURE</span>
+        <h2 class="section-title">End-to-End Autonomous Data Flow</h2>
+        <p class="section-subtitle">How AI clients communicate with YouTube Cloud through local JSON-RPC framing.</p>
+      </div>
+
+      <div class="arch-flow-diagram">
+        <div class="arch-node">
+          <div class="node-icon">🤖</div>
+          <div class="node-title">AI Client</div>
+          <div class="node-desc">Claude Desktop / Cursor / Antigravity</div>
+        </div>
+
+        <div class="flow-arrow">
+          <span class="arrow-label">JSON-RPC 2.0 (stdio)</span>
+          <div class="arrow-line"></div>
+        </div>
+
+        <div class="arch-node active-node">
+          <div class="node-icon">⚡</div>
+          <div class="node-title">McpServer</div>
+          <div class="node-desc">Router • AuthConfig • Auto-Refresh</div>
+        </div>
+
+        <div class="flow-arrow">
+          <span class="arrow-label">Zero-Dep REST</span>
+          <div class="arrow-line"></div>
+        </div>
+
+        <div class="arch-node">
+          <div class="node-icon">☁️</div>
+          <div class="node-title">Google APIs</div>
+          <div class="node-desc">YouTube Data v3 • Analytics v2 • Upload</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quickstart / Config Generator -->
+  <section id="quickstart" class="section quickstart-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET STARTED IN 30 SECONDS</span>
+        <h2 class="section-title">One-Click Client Configuration</h2>
+        <p class="section-subtitle">Choose your preferred client and copy the configuration snippet directly.</p>
+      </div>
+
+      <div class="config-generator-card">
+        <div class="config-tabs-header">
+          <button class="config-tab-btn active" data-target="uvx">🚀 Direct GitHub (uvx)</button>
+          <button class="config-tab-btn" data-target="claude">💬 Claude Desktop</button>
+          <button class="config-tab-btn" data-target="cursor">⚡ Cursor IDE</button>
+          <button class="config-tab-btn" data-target="local">🐍 Local Python</button>
+        </div>
+
+        <div class="config-code-block">
+          <div class="code-actions">
+            <span class="code-filepath" id="configFilePath">claude_desktop_config.json</span>
+            <button class="btn-copy" id="copyConfigBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>Copy Configuration</span>
+            </button>
+          </div>
+          <pre><code id="configCodeDisplay"></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-logo footer-logo">
+          <div class="logo-icon small">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <span>YouTube Studio MCP</span>
+        </div>
+        <p class="footer-tagline">Open-source autonomous YouTube Studio toolset for AI Agents.</p>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">
+          Created with ❤️ by <a href="https://github.com/hygef-v4" target="_blank" rel="noopener" class="author-link">hygef-v4</a>. Released under the MIT License.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/hygef-v4/youtube-studio-mcp" target="_blank" rel="noopener">GitHub Repository</a>
+          <a href="https://github.com/hygef-v4/youtube-studio-mcp/issues" target="_blank" rel="noopener">Report an Issue</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

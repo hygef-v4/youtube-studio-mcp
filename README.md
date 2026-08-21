@@ -10,6 +10,7 @@
 [![Google APIs: Data v3 + Analytics v2](https://img.shields.io/badge/YouTube-Data%20v3%20%2B%20Analytics%20v2-red.svg)](https://developers.google.com/youtube/v3)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(100%25%20Stdlib)-success.svg)](scripts/server.py)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Ready-purple.svg)](https://github.com/hygef-v4/youtube-studio-mcp)
+[![Live Showcase](https://img.shields.io/badge/Live%20Showcase-Clean%20Web-ff0033.svg)](https://hygef-v4.github.io/youtube-studio-mcp/website/)
 
 ```bash
 # 1. Clone & Setup
